@@ -7,8 +7,8 @@ body {
     margin: 0;
     background-image: url("images/pattern-background-mobile.svg");
     background-color: hsl(225, 100%, 94%);
-    background-position: right bottom;
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
     display: flex;
     min-height: 100vh;
 }
@@ -85,6 +85,7 @@ body {
     font-weight: 700;
     font-size: 0.8rem;
     cursor: pointer;
+    transition: 0.5s;
 }
 
 .change-subscription:hover {
@@ -119,6 +120,7 @@ body {
     color: white;
     margin-bottom: 1em;
     box-shadow: 0 10px 15px #00000034;
+    transition: 0.5s;
 }
 
 .pay-btn:hover {
@@ -128,6 +130,7 @@ body {
 .cancel-btn {
     background-color: white;
     color: hsl(224, 23%, 55%);
+    transition: 0.5s;
 }
 
 .cancel-btn:hover {
