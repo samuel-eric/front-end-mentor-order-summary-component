@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Red Hat Display", sans-serif;
+    margin: 0;
+    background-image: url("images/pattern-background-mobile.svg");
+    background-color: hsl(225, 100%, 94%);
+    background-position: right bottom;
+    background-size: cover;
+    display: flex;
+    min-height: 100vh;
+}
+
+/* LAYOUT */
+.card {
+    margin: auto;
+    width: 80%;
+    max-width: 400px;
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 5px 10px 30px #00000034;
+}
+
+.card-text {
+    padding: 5%;
+    text-align: center;
+}
+
+.subscription-section {
+    display: grid;
+    grid-template-columns: auto 2fr 1fr;
+    grid-template-areas:
+        "logo subs-name change"
+        "logo subs-price change";
+    align-items: center;
+    gap: 0 0.5em;
+    background-color: hsl(225, 100%, 98%);
+    padding: 1em;
+    border-radius: 10px;
+    margin-bottom: 1.5em;
+}
+
+/* TYPOGRAPHY */
+.order-heading {
+    margin: 0 0 0.7em 0;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: hsl(223, 47%, 23%);
+}
+
+.order-about {
+    margin: 0 0 1.5em 0;
+    padding: 0 1em 0 1em;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.7;
+    color: hsl(224, 23%, 55%);
+}
+
+.subscription-name {
+    grid-area: subs-name;
+    margin: 0;
+    font-weight: 900;
+    color: hsl(223, 47%, 23%);
+    font-size: 1rem;
+    text-align: left;
+}
+
+.subscription-price {
+    grid-area: subs-price;
+    margin: 0;
+    font-weight: 500;
+    color: hsl(224, 23%, 55%);
+    text-align: left;
+}
+
+.change-subscription {
+    grid-area: change;
+    justify-self: end;
+    text-decoration: underline;
+    color: hsl(245, 75%, 52%);
+    font-weight: 700;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.change-subscription:hover {
+    text-decoration: none;
+    color: hsla(245, 75%, 52%, 0.616);
+}
+
+/* IMAGES */
+.main-img {
+    width: 100%;
+    display: block;
+}
+
+.subscription-logo {
+    grid-area: logo;
+}
+
+/* BUTTONS */
+.btn {
+    cursor: pointer;
+    width: 100%;
+    padding: 1em;
+    border-radius: 10px;
+    border: none;
+    font-weight: 900;
+    font-family: inherit;
+    font-size: 1.1rem;
+}
+
+.pay-btn {
+    background-color: hsl(245, 75%, 52%);
+    color: white;
+    margin-bottom: 1em;
+    box-shadow: 0 10px 15px #00000034;
+}
+
+.pay-btn:hover {
+    background-color: hsla(245, 75%, 52%, 0.596);
+}
+
+.cancel-btn {
+    background-color: white;
+    color: hsl(224, 23%, 55%);
+}
+
+.cancel-btn:hover {
+    color: hsl(223, 47%, 23%);
+}
+
+/* MEDIA QUERY */
+@media (min-width: 700px) {
+    body {
+        background-image: url("images/pattern-background-desktop.svg");
+    }
+}
